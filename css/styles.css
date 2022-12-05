@@ -74,7 +74,7 @@ input, select {
 .form_control input {
     margin-right: 0.3rem;
 }
-#cancel-edit-btn {
+#cancel_edit_btn {
     margin-top: 1rem;
 }
 /*todo Toolbar*/
