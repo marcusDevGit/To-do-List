@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css"><!--css do projeto-->
+    <!--Biblioteca de icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--JS do projeto-->
+    <script src="/js/script.js" defer></script> <!--Com o atributo "defer" nao precisa colocar o script.js no final do body-->
+</head>
+<body>
+    <div class="todo_container">
+        <header> <h1>Do Lista</h1> </header>
+        <form id="todo_form">
+            <p>Adicione a sua tarefa:</p>
+            <div class="form_control">
+                <input type="text" id="todo_input" placeholder="O que vai fazer?">
+                <button type="submit"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </form>
+        <form id="edit_form">
+            <p>Edite sua tarefa:</p>
+            <input type="text" id="edit_input">
+            <button type="submit"><i class="fa-solid fa-check-double"></i></button>
+            <button id="cancel-edit-btn">Cancelar</button>
+        </form>
+        <div id="toolbar">
+            <div id="search">
+                <h4>Pesquisar</h4>
+                <form>
+                    <input type="text" id="search_input" placeholder="Buscar">
+                    <button id="erase_button"><i class="fa-solid fa-delete-left"></i></button>
+                </form>
+            </div>
+        </div>
+        <div id="filter">
+            <h4>Filtrar</h4>
+            <select id="filter-select">
+                <option value="all">Todos</option>
+                <option value="done">Feitos</option>
+                <option value="todo">A fazer</option>
+            </select>
+        </div>
+        <div id="todo-list">
+            <div class="todo">
+                <h3>Fazendo algo</h3>
+                <button class="finish-todo"><i class="fa-solid fa-check"></i></button>
+                <button class="edit-todo"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="remove-todo"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+        </div>
+        <div id="todo-list">
+            <div class="todo">
+                <h3>JavaScript</h3>
+                <button class="finish-todo"><i class="fa-solid fa-check"></i></button>
+                <button class="edit-todo"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="remove-todo"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
