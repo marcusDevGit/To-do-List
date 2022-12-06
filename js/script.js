@@ -6,7 +6,7 @@ const editForm = document.querySelector("#edit_form");
 const editInput = document.querySelector("#edit_input");
 const canceldelitBTN = document.querySelector("#cancel_edit_btn");
 
-
+let oldInputValue;
 //funçoes
 const saveTodo = (text) => {
 
@@ -42,8 +42,28 @@ const saveTodo = (text) => {
     //depois de adicionar a tarefa o cursor fica no campo
     todoInput.focus();
     
+};
+
+const toggleForms = () => {
+    //mostra ou esconder formulario de ediçao
+    editForm.classList.toggle("hide");
+    //mostra ou esconder formulario
+    todoForm.classList.toggle("hide")
+    //mostra ou esconder lista de tarefa
+    todoList.classList.toggle("hide")
 }
 
+const updateTodo = (text) => {
+    const todos = document.querySelectorAll(".todo");
+    todos.forEach((todo) => {
+        let todoTitle = todo.querySelector("h3");
+
+        //comparando se o titulo que foi selecionado e o mesmo que ta na memoria
+        if(todoTitle.innerText === oldInputValue) {
+            todoTitle.innerText = text;
+        }
+    })
+}
 // Eventos
 todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -56,4 +76,55 @@ todoForm.addEventListener("submit", (e) => {
     }
 
 
+});
+
+document.addEventListener("click", (e) => {
+
+    const targetEl = e.target;
+    const parentEl = targetEl.closest("div");
+    let todoTitle;
+
+    if(parentEl && parentEl.querySelector("h3")) {
+        todoTitle = parentEl.querySelector("h3").innerText
+    }
+
+    //finalizar tarefa
+    if(targetEl.classList.contains("finish_todo")) {
+        parentEl.classList.toggle("done");
+    }
+
+    //remover tarefa
+    if(targetEl.classList.contains("remove_todo")){
+        parentEl.remove();
+    }
+
+    //edita tarefa
+    if(targetEl.classList.contains("edit_todo")){
+        toggleForms();
+
+            //mapeando o titulo
+        editInput.value = todoTitle;
+        //mapeando novo titulo
+        oldInputValue = todoTitle;
+    }
+});
+
+canceldelitBTN.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    toggleForms();
+});
+
+editForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    //pegar o valor do input
+    const editInputValue = editInput.value
+
+    if(editInputValue) {
+        //atualizar
+        updateTodo(editInputValue)
+    }
+
+    toggleForms();
 })
