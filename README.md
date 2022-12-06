@@ -11,8 +11,8 @@ essa simples lista de tarefas pode te trazer mais produtividade e melhorar sua g
  ## Layout
 
  <p>
-  <img src="https://github.com/marcusDevGit/To-do-List/blob/main/img/print-ligh.png" height="500px" hspace="30" alt="ToDo List Dark">
-  <img src="https://github.com/marcusDevGit/To-do-List/blob/main/img/print-dark.png" height="500px" alt="ToDo List Dark">
+  <img src="https://github.com/marcusDevGit/To-do-List/blob/main/img/print-ligh.png" height="400px" hspace="30" alt="ToDo List Dark">
+  <img src="https://github.com/marcusDevGit/To-do-List/blob/main/img/print-dark.png" height="400px" alt="ToDo List Dark">
 </P>
  <br>
 
