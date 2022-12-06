@@ -11,9 +11,18 @@
     <!--JS do projeto-->
     <script src="/js/script.js" defer></script> <!--Com o atributo "defer" nao precisa colocar o script.js no final do body-->
 </head>
-<body>
+<body >
     <div class="todo_container">
-        <header> <h1> To Do Lista</h1> </header>
+        <header> 
+            <h1> ToDo List</h1>
+            <div>
+                <input type="checkbox" name="change_theme" id="change_theme">
+                <label for="change_theme">
+                    <i  class="fa-regular fa-sun"></i>
+                    <i class="fa fa-regular fa-moon"></i>
+                </label>
+            </div> 
+        </header>
         <form id="todo_form">
             <p>Adicione a sua tarefa:</p>
             <div class="form_control">

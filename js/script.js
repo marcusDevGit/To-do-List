@@ -10,6 +10,41 @@ const eraseBtn = document.querySelector("#erase_button");
 const filterBtn = document.querySelector("#filter_select");
 
 let oldInputValue;
+
+
+
+//Dark mode
+const changeThemeBtn = document.querySelector("#change_theme");
+
+    //toggle dark mode (munda)
+    function toggleDarkMode () {
+        document.body.classList.toggle("dark");
+    }
+        //caregar a preferencia do usuario
+        function loadTheme() {
+            const darkMode = localStorage.getItem("dark");
+
+            if(darkMode) {
+                toggleDarkMode();
+            }
+        }
+        loadTheme();
+
+    //criando evento
+    changeThemeBtn.addEventListener("change", function() {
+        toggleDarkMode();
+    
+        //salvar ou remover a preferencia do usuario
+        localStorage.removeItem("dark")
+
+        if(document.body.classList.contains("dark")) {
+            localStorage.setItem("dark", 1);
+        }
+}); // dark mode
+
+
+
+
 //funçoes
 const saveTodo = (text, done = 0, save = 1) => {
 
