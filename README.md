@@ -37,7 +37,7 @@ essa simples lista de tarefas pode te trazer mais produtividade e melhorar sua g
 
 ## Acesso
 
-<p> Projeto desponivel em Netlify <a href="https://app.netlify.com/sites/todolis-ta-mar/overview">Click aqui</a>
+<p> Projeto desponivel em Netlify <a href="https://todolis-ta-mar.netlify.app">Click aqui</a>
  
  
 ## Autor
