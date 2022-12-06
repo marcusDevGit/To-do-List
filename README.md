@@ -29,11 +29,11 @@ essa simples lista de tarefas pode te trazer mais produtividade e melhorar sua g
 <p>Funcões do ToDo List</p>
 <br>
 
--[x] Criação de Tarefas
--[x] Edição de Tarefas
--[x] Exclusão
--[x] Clonclusão
--[x] Mudança de Tema
+- [x] Criação de Tarefas
+- [x] Edição de Tarefas
+- [x] Exclusão
+- [x] Clonclusão
+- [x] Mudança de Tema
 
 ### Autor
 <br>
