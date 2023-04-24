@@ -42,7 +42,6 @@ essa simples lista de tarefas pode te trazer mais produtividade e melhorar sua g
  
 ## Autor
  
-<img style="border-radius: 70%;" src="https://avatars3.githubusercontent.com/u/380327?s=460&u=61b426b901b8fe02e12019b1fdb67bf0072d4f00&v=4" width="100px;" alt=""/> <br />
  <sub><b>Marcus Phellypp</b></sub>
 
  [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/linkedin.com/in/marcus25-dev/)
